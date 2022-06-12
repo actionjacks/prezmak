@@ -1,0 +1,45 @@
+@use '@/styles/variables';
+@use '@/styles/mixins/flex_font';
+
+.service-box {
+  position: relative;
+  height: 240px;
+  padding: 2.5px;
+
+  .text-wrapper {
+    z-index: 2;
+    cursor: pointer;
+    padding: 40px;
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-color: variables.$secondary;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease-in-out 0s;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 30%);
+
+    &:hover {
+      color: variables.$secondary;
+      opacity: .7;
+      background-color: variables.$primary;
+    }
+
+    .text {
+      @include flex_font.dynamic(variables.$font-extra-size-xxl, variables.$font-extra-size-xxxl);
+      color: variables.$secondary;
+      text-transform: uppercase;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+  }
+
+  .service-bg {
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .73;
+  }
+}

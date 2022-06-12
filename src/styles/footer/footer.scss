@@ -1,0 +1,51 @@
+@use '@/styles/variables';
+@use '@/styles/mixins/flex_font';
+
+.wrapper {
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(66, 68, 90, 0.411);
+  -moz-box-shadow: 0px 0px 3px 0px rgba(66, 68, 90, 0.397);
+  box-shadow: 0px 0px 3px 0px rgba(66, 68, 90, 0.356);
+  background-color: variables.$primary-dark;
+
+
+  .contact-wrapper {
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+
+    .text-heading {
+      @include flex_font.dynamic(variables.$font-size-lg, variables.$font-size-xl);
+      word-break: break-word;
+      word-wrap: break-word;
+      color: variables.$primary-lighter-lighter;
+      border-right: 5px solid variables.$secondary;
+      margin-right: 8px;
+      padding-right: 8px
+    }
+
+    .text {
+      @include flex_font.dynamic(variables.$font-size-md, variables.$font-size-lg);
+      word-break: break-word;
+      word-wrap: break-word;
+      color: variables.$primary-lighter-lighter;
+    }
+  }
+
+  .credits {
+    padding-bottom: 10px;
+
+    p {
+      @include flex_font.dynamic(variables.$font-size-md, variables.$font-size-lg);
+      text-align: center;
+      word-break: break-word;
+      word-wrap: break-word;
+      color: variables.$primary-lighter-lighter;
+
+      @media screen and (max-width: 550px) {
+        text-align: left;
+        padding-left: 15px;
+      }
+    }
+  }
+}

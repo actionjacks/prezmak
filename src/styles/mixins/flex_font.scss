@@ -1,0 +1,34 @@
+@use 'sass:math';
+
+@function strip-unit ($value) {
+  @return calc($value / ($value * 0 + 1px));
+}
+
+/**
+Scale text to be responsive based on screen width
+  $min_width  Minimal window width (in pixels)
+  $max_width  Maximum window width (in pixels)
+  $min_font  Minimal font size (in pixels)
+  $max_font  Maximum font size (in pixels)
+*/
+$min-vw: 375px !default;
+$max-vw: 1200px !default;
+
+@mixin dynamic ($min-font-size, $max-font-size) {
+  $unit-1: math.unit($min-vw);
+  $unit-2: math.unit($max-vw);
+  $unit-3: math.unit($min-font-size);
+  $unit-4: math.unit($max-font-size);
+
+  @if $unit-1 ==$unit-2 and $unit-1 ==$unit-3 and $unit-1 ==$unit-4 {
+    font-size: $min-font-size;
+
+    @media screen and (min-width: $min-vw) {
+      font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+    }
+
+    @media screen and (min-width: $max-vw) {
+      font-size: $max-font-size;
+    }
+  }
+}

@@ -1,0 +1,152 @@
+@use '@/styles/variables';
+@use '@/styles/mixins/flex_font';
+
+.content {
+  position: relative;
+  height: 100vh;
+
+  .baner {
+    background-color: rgba(0, 0, 0, .86);
+    opacity: .85;
+    mix-blend-mode: multiply;
+    transition: background .3s, border-radius .3s, opacity .3s;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+  }
+
+  .top-content {
+    position: absolute;
+    padding: 5px;
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(66, 68, 90, 0.411);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(66, 68, 90, 0.397);
+    box-shadow: 0px 0px 3px 0px rgba(66, 68, 90, 0.356);
+    background-color: rgb(66 68 90 / 40%);
+    display: flex;
+    flex-direction: row;
+    top: 25%;
+    left: 10%;
+    text-align: left;
+    transform: translate(0, -30%);
+
+    .title {
+      @include flex_font.dynamic(variables.$font-size-xl, variables.$font-extra-size-xl);
+      color: variables.$secondary;
+      text-transform: uppercase;
+      word-break: break-word;
+      word-wrap: break-word;
+      text-align: left;
+      font-weight: 900;
+    }
+
+    .heading {
+      @include flex_font.dynamic(variables.$font-extra-size-xxl, variables.$font-extra-size-xxxl);
+      padding-top: 10px;
+      word-break: break-word;
+      word-wrap: break-word;
+      text-align: left;
+      color: variables.$primary-lighter-lighter;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+
+    .text {
+      @include flex_font.dynamic(variables.$font-size-md, variables.$font-size-lg);
+      padding-top: 25px;
+      word-break: break-word;
+      word-wrap: break-word;
+      text-align: left;
+      color: variables.$primary-lighter-lighter;
+    }
+
+    .link-wrapper {
+      padding-top: 15px;
+      display: flex;
+
+      a {
+        @include flex_font.dynamic(variables.$font-size-lg, variables.$font-size-xl);
+        cursor: pointer;
+        -webkit-font-smoothing: antialiased;
+        word-break: break-word;
+        word-wrap: break-word;
+        font-weight: 500;
+        fill: variables.$primary-lighter-lighter;
+        color: variables.$primary-lighter-lighter;
+        background-color: variables.$secondary;
+        padding: 13px 20px 10px 20px;
+        transition: all 0.2s ease-in-out 0s;
+      }
+
+      a:nth-of-type(odd) {
+        line-height: 29px;
+
+        &:hover {
+          color: variables.$secondary;
+          background-color: variables.$primary;
+        }
+      }
+
+      a:nth-of-type(even) {
+        border: 5px solid;
+        border-color: variables.$secondary;
+        background-color: variables.$primary-dark;
+
+        &:hover {
+          color: variables.$primary-lighter-dark;
+          background-color: variables.$secondary;
+        }
+      }
+    }
+  }
+
+  .bottom-content {
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(66, 68, 90, 0.411);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(66, 68, 90, 0.397);
+    box-shadow: 0px 0px 3px 0px rgba(66, 68, 90, 0.356);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    @media screen and (max-width: 550px) {
+      flex-direction: column;
+    }
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: background .3s,
+    border .3s,
+    border-radius .3s,
+    box-shadow .3s;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: variables.$secondary;
+
+    p {
+      @include flex_font.dynamic(variables.$font-size-lg, variables.$font-size-xl);
+      -webkit-font-smoothing: antialiased;
+      word-break: break-word;
+      word-wrap: break-word;
+      text-align: left;
+      color: variables.$primary;
+      font-weight: 600;
+      font-style: normal;
+      padding: 15px;
+      line-height: 0;
+      letter-spacing: 0;
+    }
+
+    a {
+      @include flex_font.dynamic(variables.$font-size-lg, variables.$font-size-xl);
+      -webkit-font-smoothing: antialiased;
+      word-break: break-word;
+      word-wrap: break-word;
+      font-weight: 500;
+      fill: variables.$primary-lighter-lighter;
+      color: variables.$primary-lighter-lighter;
+      background-color: variables.$primary-dark;
+      padding: 13px 20px 10px 20px;
+    }
+  }
+}

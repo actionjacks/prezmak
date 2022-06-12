@@ -1,0 +1,31 @@
+@use '../styles/variables';
+
+* {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: variables.$primary-lighter-lighter;
+  color: variables.$primary;
+  min-width: 332px;
+  overflow-x: hidden;
+
+  &.overflow-hidden {
+    overflow: hidden;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}

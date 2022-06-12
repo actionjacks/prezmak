@@ -1,0 +1,40 @@
+@use '@/styles/variables';
+@use '@/styles/mixins/flex_font';
+
+.middle-wrapper {
+  margin-top: 15px;
+  height: 100%;
+
+  .text-wrapper {
+    margin-bottom: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .text {
+      @include flex_font.dynamic(variables.$font-extra-size-xxl, variables.$font-extra-size-xxxl);
+      padding: 25px 0 5px 0;
+      font-weight: 900;
+      border-bottom: 5px solid;
+      border-radius: 15px;
+      border-color: variables.$secondary;
+    }
+  }
+
+  .services-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 30%);
+
+    .box {
+      width: 33.33%;
+
+      @media screen and (max-width: 650px) {
+        width: 100%;
+      }
+    }
+  }
+}
