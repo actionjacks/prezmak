@@ -90,6 +90,7 @@
     word-wrap: break-word;
     text-align: left;
     font-weight: 700;
+    padding-bottom: 2px;
     height: auto;
     display: flex;
     color: variables.$primary-lighter-lighter;
@@ -108,7 +109,7 @@
   text-align: left;
 
   @media screen and (max-width: 550px) {
-    width: 100%;
+    width: 100vw;
   }
 
   .title {
@@ -122,7 +123,7 @@
   }
 
   .heading {
-    @include flex_font.dynamic(variables.$font-extra-size-xxl, variables.$font-extra-size-xxxl);
+    @include flex_font.dynamic(variables.$font-extra-size-xl, variables.$font-extra-size-xxl);
     padding-top: 10px;
     word-break: break-word;
     word-wrap: break-word;

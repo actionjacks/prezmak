@@ -1,8 +1,8 @@
 <template>
   <footer id="kontakt" class="wrapper">
     <div class="contact-wrapper">
-      <h4 class="text-heading">lorem</h4>
-      <p class="text">lorem</p>
+      <h4 class="text-heading">Wasilków/Białystok</h4>
+      <p class="text">realizacja actionjacks22@gmail.com</p>
     </div>
 
     <div class="credits">
