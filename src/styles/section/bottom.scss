@@ -43,7 +43,7 @@
   -webkit-box-shadow: 0px 0px 3px 0px rgba(66, 68, 90, 0.411);
   -moz-box-shadow: 0px 0px 3px 0px rgba(66, 68, 90, 0.397);
   box-shadow: 0px 0px 3px 0px rgba(66, 68, 90, 0.356);
-  background-color: rgb(66 68 90 / 40%);
+  background-color: rgb(66 68 90 / 70%);
   display: flex;
   flex-direction: row;
   top: 45%;
@@ -54,6 +54,7 @@
   @media screen and (max-width: 550px) {
     top: 15%;
     right: 10%;
+    width: 80%;
   }
 
   .title {
@@ -69,6 +70,7 @@
   .heading {
     @include flex_font.dynamic(variables.$font-extra-size-xxl, variables.$font-extra-size-xxxl);
     padding-top: 10px;
+    padding-bottom: 10px;
     word-break: break-word;
     word-wrap: break-word;
     text-align: left;
@@ -77,12 +79,19 @@
     font-weight: 900;
   }
 
+  .icon {
+    padding-right: 3px;
+    color: variables.$secondary;
+  }
+
   .text {
     @include flex_font.dynamic(variables.$font-size-md, variables.$font-size-lg);
-    padding-top: 25px;
     word-break: break-word;
     word-wrap: break-word;
     text-align: left;
+    font-weight: 700;
+    height: auto;
+    display: flex;
     color: variables.$primary-lighter-lighter;
   }
 }

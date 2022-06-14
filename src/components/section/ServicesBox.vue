@@ -2,7 +2,7 @@
   <div class="service-box">
     <div class="service-bg" :style="src"></div>
     <div class="text-wrapper">
-      <p class="text"> lorem lorem</p>
+      <p class="text">{{ title }}</p>
     </div>
   </div>
 </template>
@@ -11,7 +11,9 @@
 import { defineComponent, PropType } from 'vue'
 
 export default defineComponent({
-  props: { image: { type: Object as PropType<Record<string, string>>, required: true } },
+  props: {
+    image: { type: Object as PropType<Record<string, string>>, required: true }, title: { type: String, required: true }
+  },
   setup(props) {
 
     return {

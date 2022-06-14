@@ -13,6 +13,7 @@
     border-style: solid;
     border-width: 2px 2px 2px 2px;
     border-color: variables.$secondary;
+    background-color: variables.$primary-half-transparent;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -23,11 +24,10 @@
     &:hover {
       color: variables.$secondary;
       opacity: .7;
-      background-color: variables.$primary;
     }
 
     .text {
-      @include flex_font.dynamic(variables.$font-extra-size-xxl, variables.$font-extra-size-xxxl);
+      @include flex_font.dynamic(variables.$font-size-xl, variables.$font-extra-size-xl);
       color: variables.$secondary;
       text-transform: uppercase;
       font-weight: 900;

@@ -1,25 +1,41 @@
 <template>
-  <div id="section-2" class="bottom-section">
+  <div id="prezmak" class="bottom-section">
     <div class="background" :style="image"></div>
     <div class="top-content">
       <article>
         <p class="title">usługi budowlane koparko-ładowarką</p>
-        <h1 class="heading">loremloremloremloremloremlorem</h1>
+        <h1 class="heading">Wasilków i okolice</h1>
         <p class="text">
-          loremloremloremloremloremloremloremloreml loremloremloremloremloremloremloremloreml
-          loremloremloremloremloremloremloremloreml loremloremloremloremloremloremloremloreml
-          loremloremloremloremloremloremloremloreml
+          <svg-icon class="icon" :fa-icon="faHammer" :size="16"></svg-icon>Wykopy pod fundamenty
+          <br>
+        </p>
+        <p class="text">
+          <svg-icon class="icon" :fa-icon="faHammer" :size="16"></svg-icon>Niwelacja terenu, profilowaniem terenu
+          <br>
+        </p>
+        <p class="text">
+          <svg-icon class="icon" :fa-icon="faHammer" :size="16"></svg-icon>Drenaże i odwodnienia
+          <br>
+        </p>
+        <p class="text">
+          <svg-icon class="icon" :fa-icon="faHammer" :size="16"></svg-icon>Przygotowanie terenu pod usługi brukarskie
+          <br>
+        </p>
+        <p class="text">
+          <svg-icon class="icon" :fa-icon="faHammer" :size="16"></svg-icon>Wykopy pod oczka wodne i stawy
+          <br>
         </p>
       </article>
     </div>
     <div class="bottom-content">
       <article>
-        <p class="title">usługi budowlane koparko-ładowarką</p>
-        <h1 class="heading">loremloremloremloremloremlorem</h1>
+        <p class="title">Usługi budowlane koparko-ładowarką</p>
+        <h1 class="heading">na terenie Wasilków, okolice</h1>
         <p class="text">
-          loremloremloremloremloremloremloremloreml loremloremloremloremloremloremloremloreml
-          loremloremloremloremloremloremloremloreml loremloremloremloremloremloremloremloreml
-          loremloremloremloremloremloremloremloreml
+          Oferujemy usługi koparko-ładowarką, które wykonujemy rzetelnie, precyzyjnie i terminowo. Na zamówienie
+          naszych Klientów przeprowadzamy kompleksowe roboty ziemne koparką, ładowarką. Co więcej,
+          jesteśmy w stanie dopasować się do ich indywidualnych wymagań zarówno odnośnie do charakteru samego
+          zlecenia, jak i czasu jego realizacji.
         </p>
       </article>
     </div>
@@ -28,10 +44,15 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { faHammer } from "@fortawesome/free-solid-svg-icons";
+import SvgIcon from "vue3-icon";
 
 export default defineComponent({
+  components: { SvgIcon },
   setup() {
     return {
+      SvgIcon,
+      faHammer,
       image: { backgroundImage: "url(assets/koparka-2-1.webp)" }
     }
   }

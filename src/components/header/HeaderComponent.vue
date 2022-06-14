@@ -9,9 +9,9 @@
         </div>
         <nav class="nav" :class="{ change: activeClass }" id="nav">
           <ul>
-            <li><a href="#section-1">Lorem</a></li>
-            <li><a href="#section-2">Lorem</a></li>
-            <li><a href="#section-3">Lorem</a></li>
+            <li><a href="#oferta">Oferowane usługi</a></li>
+            <li><a href="#prezmak">Prezmak</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
           </ul>
         </nav>
       </div>
@@ -20,13 +20,13 @@
 
     <div v-else class="menu" :class="{ show }">
       <div v-if="show" class="e-mail">
-        <p><a href="mailto:lorem@o2.pl">lorem.lotem@o2.pl</a></p>
+        <p><a href="mailto:lorem@o2.pl">firma-prezmak@tlen.pl</a></p>
         <svg-icon class="icon" :fa-icon="faEnvelope" :size="24"></svg-icon>
       </div>
       <ul>
-        <li><a href="#section-1">Lorem</a></li>
-        <li><a href="#section-2">Lorem</a></li>
-        <li><a href="#section-3">Lorem</a></li>
+        <li><a href="#oferta">Oferowane usługi</a></li>
+        <li><a href="#prezmak">Prezmak</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
       </ul>
     </div>
   </nav>
