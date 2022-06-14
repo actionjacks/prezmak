@@ -16,8 +16,11 @@
 
       <span class="bottom-content">
         <p>loremloremloremloremloremlorem</p>
-        <a>lorem</a>
-        <p>tel + 48 99 999 999</p>
+        <a>facebook</a>
+        <div class="phone-wrapper">
+          <svg-icon class="icon" :fa-icon="faPhone" :size="24"></svg-icon>
+          <a href="tel:+48987654321">tel + 48 99 999 999</a>
+        </div>
       </span>
     </section>
   </section>
@@ -26,12 +29,17 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import SvgIcon from "vue3-icon";
 
 export default defineComponent({
+  components: { SvgIcon },
   setup() {
 
     return {
-      image: { backgroundImage: "url(assets/top_baner.webp)" }
+      image: { backgroundImage: "url(assets/top_baner.webp)" },
+      SvgIcon,
+      faPhone
     }
   }
 })

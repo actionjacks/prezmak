@@ -1,44 +1,44 @@
 <template>
   <nav class="menu-wrapper">
-    <Transition>
-      <div v-if="showBurger" class="mobile-wrapper">
-        <div id="menu">
-          <div id="menu-bar" :class="{ change: activeClass }" @click="menuOnClick">
-            <div id="bar1" class="bar"></div>
-            <div id="bar2" class="bar"></div>
-            <div id="bar3" class="bar"></div>
-          </div>
-          <nav class="nav" :class="{ change: activeClass }" id="nav">
-            <ul>
-              <li><a href="#section-1">Lorem</a></li>
-              <li><a href="#section-2">Lorem</a></li>
-              <li><a href="#section-3">Lorem</a></li>
-            </ul>
-          </nav>
+    <div v-if="showBurger" class="mobile-wrapper">
+      <div id="menu">
+        <div id="menu-bar" :class="{ change: activeClass }" @click="menuOnClick">
+          <div id="bar1" class="bar"></div>
+          <div id="bar2" class="bar"></div>
+          <div id="bar3" class="bar"></div>
         </div>
-        <div class="menu-bg" :class="{ changeBg: activeClass }" id="menu-bg"></div>
+        <nav class="nav" :class="{ change: activeClass }" id="nav">
+          <ul>
+            <li><a href="#section-1">Lorem</a></li>
+            <li><a href="#section-2">Lorem</a></li>
+            <li><a href="#section-3">Lorem</a></li>
+          </ul>
+        </nav>
       </div>
+      <div class="menu-bg" :class="{ changeBg: activeClass }" id="menu-bg"></div>
+    </div>
 
-      <div v-else class="menu" :class="{ show }">
-        <div v-if="show" class="e-mail">
-          <p>lorem.lotem@o2.pl</p>
-        </div>
-        <ul>
-          <li><a href="#section-1">Lorem</a></li>
-          <li><a href="#section-2">Lorem</a></li>
-          <li><a href="#section-3">Lorem</a></li>
-        </ul>
-
+    <div v-else class="menu" :class="{ show }">
+      <div v-if="show" class="e-mail">
+        <p><a href="mailto:lorem@o2.pl">lorem.lotem@o2.pl</a></p>
+        <svg-icon class="icon" :fa-icon="faEnvelope" :size="24"></svg-icon>
       </div>
-
-    </Transition>
+      <ul>
+        <li><a href="#section-1">Lorem</a></li>
+        <li><a href="#section-2">Lorem</a></li>
+        <li><a href="#section-3">Lorem</a></li>
+      </ul>
+    </div>
   </nav>
 </template>
 
 <script lang="ts">
 import { defineComponent, onMounted, onUnmounted, ref } from "vue"
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import SvgIcon from "vue3-icon";
 
 export default defineComponent({
+  components: { SvgIcon },
   setup() {
     // todo Refactor code after finish !
     const show = ref<boolean>(false)
@@ -81,7 +81,9 @@ export default defineComponent({
       menuOnClick,
       activeClass,
       showBurger,
-      show
+      show,
+      SvgIcon,
+      faEnvelope
     };
   },
 });
