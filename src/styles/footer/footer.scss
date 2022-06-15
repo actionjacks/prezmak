@@ -10,12 +10,13 @@
 
 
   .contact-wrapper {
+    width: 100%;
     padding: 25px;
     display: flex;
     justify-content: center;
 
     .text-heading {
-      @include flex_font.dynamic(variables.$font-size-lg, variables.$font-size-xl);
+      @include flex_font.dynamic(variables.$font-size-sm, variables.$font-size-xl);
       word-break: break-word;
       word-wrap: break-word;
       color: variables.$primary-lighter-lighter;
@@ -25,7 +26,7 @@
     }
 
     .text {
-      @include flex_font.dynamic(variables.$font-size-md, variables.$font-size-lg);
+      @include flex_font.dynamic(variables.$font-size-xs, variables.$font-size-md);
       word-break: break-word;
       word-wrap: break-word;
       color: variables.$primary-lighter-lighter;

@@ -18,11 +18,12 @@
 
   .top-content {
     position: absolute;
-    padding: 5px;
+    padding: 15px;
     -webkit-box-shadow: 0px 0px 3px 0px rgba(66, 68, 90, 0.411);
     -moz-box-shadow: 0px 0px 3px 0px rgba(66, 68, 90, 0.397);
     box-shadow: 0px 0px 3px 0px rgba(66, 68, 90, 0.356);
     background-color: rgb(66 68 90 / 70%);
+    border-radius: 5px;
     display: flex;
     flex-direction: row;
     top: 25%;
@@ -31,13 +32,14 @@
     transform: translate(0, -30%);
 
     .title {
-      @include flex_font.dynamic(variables.$font-size-xl, variables.$font-extra-size-xl);
+      @include flex_font.dynamic(variables.$font-size-xl, variables.$font-extra-size-xxl);
       color: variables.$secondary;
       text-transform: uppercase;
       word-break: break-word;
       word-wrap: break-word;
       text-align: left;
       font-weight: 900;
+      border-left: 5px solid variables.$secondary;
     }
 
     .heading {
@@ -59,11 +61,13 @@
       word-wrap: break-word;
       text-align: left;
       color: variables.$primary-lighter-lighter;
+      border-left: 5px solid variables.$secondary;
     }
 
     .link-wrapper {
       padding-top: 15px;
       display: flex;
+      border-left: 5px solid variables.$primary-lighter-lighter;
 
       a {
         @include flex_font.dynamic(variables.$font-size-lg, variables.$font-size-xl);
@@ -71,7 +75,7 @@
         -webkit-font-smoothing: antialiased;
         word-break: break-word;
         word-wrap: break-word;
-        font-weight: 500;
+        font-weight: 900;
         fill: variables.$primary-lighter-lighter;
         color: variables.$primary-dark;
         background-color: variables.$secondary;
@@ -136,18 +140,18 @@
 
     p {
       @include flex_font.dynamic(variables.$font-size-sm, variables.$font-size-xl);
-      line-height: 50%;
       -webkit-font-smoothing: antialiased;
       word-break: break-word;
       word-wrap: break-word;
       text-align: left;
       color: variables.$primary;
-      font-weight: 600;
+      font-weight: 100;
       font-style: normal;
       padding: 5px;
-      line-height: 1.2;
       letter-spacing: 0;
+      height: auto;
       text-decoration: none;
+      border-left: 5px solid variables.$primary;
 
       @media screen and (max-width: 550px) {
         margin-bottom: 1px;

@@ -3,8 +3,8 @@
     <div class="background" :style="image"></div>
     <div class="top-content">
       <article>
-        <p class="title">usługi budowlane koparko-ładowarką</p>
-        <h1 class="heading">Wasilków i okolice</h1>
+        <p class="title">usługi koparko - ładowarką</p>
+        <h1 class="heading">wasilków i okolice</h1>
         <p class="text">
           <svg-icon class="icon" :fa-icon="faHammer" :size="16"></svg-icon>Wykopy pod fundamenty
           <br>
@@ -36,6 +36,18 @@
           naszych Klientów przeprowadzamy kompleksowe roboty ziemne koparką, ładowarką. Co więcej,
           jesteśmy w stanie dopasować się do ich indywidualnych wymagań zarówno odnośnie do charakteru samego
           zlecenia, jak i czasu jego realizacji.
+          <br>
+          <br>
+          wyburzanie garaży i komórek,
+          wywóz gruzu, wywóz śmieci budowlanych,
+          wycinka drzew, wyrywanie karp,
+          wymiana gruntu,
+          niwelacja terenu, korytowanie, utwardzanie terenu,
+          wykopy pod budynek mieszkalny,
+          wykopy fundamentów pod budynki,
+          wykopy pod szamba różnego rodzaju,
+          wykopy stawów,
+          wykopy basenów.
         </p>
       </article>
     </div>

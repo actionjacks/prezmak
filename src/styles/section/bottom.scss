@@ -44,6 +44,7 @@
   -moz-box-shadow: 0px 0px 3px 0px rgba(66, 68, 90, 0.397);
   box-shadow: 0px 0px 3px 0px rgba(66, 68, 90, 0.356);
   background-color: rgb(66 68 90 / 70%);
+  border-left: 5px solid variables.$secondary;
   display: flex;
   flex-direction: row;
   top: 45%;
@@ -58,7 +59,7 @@
   }
 
   .title {
-    @include flex_font.dynamic(variables.$font-size-xl, variables.$font-extra-size-xl);
+    @include flex_font.dynamic(variables.$font-extra-size-xxl, variables.$font-extra-size-xxxl);
     color: variables.$secondary;
     text-transform: uppercase;
     word-break: break-word;
@@ -80,7 +81,7 @@
   }
 
   .icon {
-    padding-right: 3px;
+    padding-right: 8px;
     color: variables.$secondary;
   }
 
@@ -89,8 +90,8 @@
     word-break: break-word;
     word-wrap: break-word;
     text-align: left;
-    font-weight: 700;
-    padding-bottom: 2px;
+    font-weight: 400;
+    padding-bottom: 5px;
     height: auto;
     display: flex;
     color: variables.$primary-lighter-lighter;
@@ -98,7 +99,7 @@
 }
 
 .bottom-content {
-  padding: 5px;
+  padding: 15px;
   width: 40%;
   -webkit-box-shadow: 0px 0px 3px 0px rgba(66, 68, 90, 0.411);
   -moz-box-shadow: 0px 0px 3px 0px rgba(66, 68, 90, 0.397);
@@ -109,7 +110,7 @@
   text-align: left;
 
   @media screen and (max-width: 550px) {
-    width: 100vw;
+    width: 90vw;
   }
 
   .title {
@@ -131,6 +132,7 @@
     color: variables.$primary-lighter-lighter;
     text-transform: uppercase;
     font-weight: 900;
+    border-right: 5px solid variables.$secondary;
   }
 
   .text {
